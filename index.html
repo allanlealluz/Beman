@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Citações Filosofia & Bíblia</title>
+  <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Citações & Reflexões</h1>
+
+    <!-- Busca por termo -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Digite um tema (ex: coragem, tempo, amor)...">
+      <button onclick="buscarPorTema()">Buscar</button>
+    </div>
+
+    <div class="options">
+      <button class="btn-secundary" onclick="carregarFrase('aleatorio')">Aleatória</button>
+      <button class="btn-secundary" onclick="carregarFrase('biblia')">Bíblia</button>
+      <button class="btn-secundary" onclick="carregarFrase('estoico')">Marco Aurélio / Estoicos</button>
+      <button class="btn-secundary" onclick="carregarFrase('nietzsche')">Nietzsche</button>
+    </div>
+
+    <!-- Exibicao da Citação -->
+    <div class="quote-card" id="quoteCard">
+      <p class="quote-text" id="quoteText">Clique em um dos botões para gerar uma citação.</p>
+      <div class="quote-author">
+        <span id="quoteAuthor"></span>
+        <div class="quote-source" id="quoteSource"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="JS/quoteService.js"></script>
+</body>
+</html>
